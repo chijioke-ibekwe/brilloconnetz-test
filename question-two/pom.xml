@@ -18,7 +18,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>dev.chijiokeibekwe.questionone.QuestionTwoApp</mainClass>
+                    <mainClass>dev.chijiokeibekwe.questiontwo.QuestionTwoApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
