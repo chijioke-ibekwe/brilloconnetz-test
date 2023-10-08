@@ -12,6 +12,7 @@ public class QuestionTwoApp {
         InputUtil.welcomeCustomers();
         String serviceMethod = InputUtil.getServiceMethod();
         int slots = InputUtil.getNumberOfServingSlots();
+        InputUtil.close();
 
         PancakeHelper helper = new PancakeHelper(serviceMethod, slots);
         helper.servePancakes();
