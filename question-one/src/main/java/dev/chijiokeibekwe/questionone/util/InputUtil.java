@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
 
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -44,33 +43,6 @@ public final class InputUtil {
         scanner.close();
     }
 
-//    public static void validateUserData(UserData userData) {
-//        Validator validator = Validation.byDefaultProvider()
-//                .configure()
-//                .messageInterpolator(new ParameterMessageInterpolator())
-//                .buildValidatorFactory()
-//                .getValidator();
-//
-//        Set<ConstraintViolation<UserData>> violations = validator.validate(userData);
-//
-//        if(violations.isEmpty()) {
-//            return;
-//        }
-//
-//        Map<String, String> violationMap = new HashMap<>();
-//
-//        violations.stream()
-//                .collect(Collectors.groupingBy(ConstraintViolation::getPropertyPath)).values()
-//                .forEach(gv -> {
-//                    List<String> messages = new ArrayList<>();
-//                    gv.forEach(v -> messages.add(v.getMessage()));
-//                    violationMap.put(gv.get(0).getPropertyPath().toString(), String.join("; ", messages));
-//                });
-//
-//        violationMap.forEach((key, value) -> System.err.println(StringUtils.capitalize(key) + ": " + value));
-//
-//        System.exit(1);
-//    }
 
     public static void validateUserData(UserData userData) {
         Validator validator = Validation.byDefaultProvider()
